@@ -1,0 +1,8 @@
+services:
+  - docker
+ script:
+  - docker build -t franjpr/my-node-server .
+ after_success:
+  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+  - docker tag my-node-server $DOCKER_USER/my-node-server
+  - docker push $DOCKER_USER/my-node-server
