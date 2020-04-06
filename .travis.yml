@@ -3,7 +3,7 @@ after_success:
   - "docker push $DOCKER_USER/my-node-server"
 deploy:
   provider: script
-  script: "bash deploy.sh"
+  script: "bash deploy.sh $SSH_KEY"
 script:
   - "docker build -t franjpr/my-node-server ."
 services:
