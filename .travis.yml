@@ -1,6 +1,9 @@
 after_success:
   - "docker login -u $DOCKER_USER -p $DOCKER_PASSWORD"
   - "docker push $DOCKER_USER/my-node-server"
+deploy:
+  provider: script
+  script: "bash deploy.sh"
 script:
   - "docker build -t franjpr/my-node-server ."
 services:
