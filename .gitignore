@@ -1,0 +1,8 @@
+node_modules
+key-franjpr.pem
+terraform.exe
+access_id.txt
+secret_key.txt
+terraform.tfstate
+commands.txt
+.terraform
