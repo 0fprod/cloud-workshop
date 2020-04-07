@@ -6,3 +6,4 @@ secret_key.txt
 terraform.tfstate
 commands.txt
 .terraform
+terraform.tfstate.backup

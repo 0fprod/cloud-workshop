@@ -1,7 +1,5 @@
 provider "aws" {
     region = "eu-west-1"
-    access_key = "${file("./access_id.txt")}"
-    secret_key = "${file("./secret_key.txt")}"
 }
 
 data "template_file" "start_script" {
